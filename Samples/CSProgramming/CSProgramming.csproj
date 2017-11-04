@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1223AC16-AD58-4009-BEB6-3B635D7DF84F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>CSProgramming</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CSProgramming</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>ADO.NET.General.frmData</StartupObject>
+    <WebReference_EnableProperties>true</WebReference_EnableProperties>
+    <WebReference_EnableSQLTypes>false</WebReference_EnableSQLTypes>
+    <WebReference_EnableLegacyEventingModel>true</WebReference_EnableLegacyEventingModel>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/CS2Programming/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BaseClassLibrary\Threading\ReadMe.txt" />
+    <EmbeddedResource Include="WindowsForms\BackgroundWorkerDemo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BackgroundWorkerDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="WindowsForms\DB\Northwind.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Northwind.mdf</DependentUpon>
+    </Content>
+    <Content Include="WindowsForms\DB\Northwind.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="WindowsForms\DB\Northwind_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Northwind.mdf</DependentUpon>
+    </Content>
+    <Content Include="WindowsForms\Images\ieBack.gif" />
+    <Content Include="WindowsForms\Images\ieForward.gif" />
+    <Content Include="WindowsForms\Images\ieHome.gif" />
+    <Content Include="WindowsForms\Images\ieRefresh.gif" />
+    <Content Include="BaseClassLibrary\FileSystemWatcher\WatchFolder\Customers.xml" />
+    <Content Include="BaseClassLibrary\Streams\Files\HelloWorld.txt" />
+    <Content Include="AdditionalFeatures\XmlSerialization\helloworld.xml" />
+    <Content Include="Generics\GenericsPerfs\Timer.bmp" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="BaseClassLibrary\Collections\GenericPersonComparer.cs" />
+    <Compile Include="BaseClassLibrary\Compression\ZipDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\Compression\ZipDemo.designer.cs">
+      <DependentUpon>ZipDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseClassLibrary\Compression\ZipUtil.cs" />
+    <Compile Include="BaseClassLibrary\Email\SmtpDemo.cs" />
+    <Compile Include="BaseClassLibrary\FTP\FTPDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\FTP\FTPDemo.designer.cs">
+      <DependentUpon>FTPDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseClassLibrary\FTP\SimpleFTPClient.cs" />
+    <Compile Include="BaseClassLibrary\RegularExpressions\RegexTester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\RegularExpressions\RegexTester.Designer.cs">
+      <DependentUpon>RegexTester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseClassLibrary\RegularExpressions\RegexSimple.cs" />
+    <Compile Include="BaseClassLibrary\StopWatch\StopWatchDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\StopWatch\StopWatchDemo.designer.cs">
+      <DependentUpon>StopWatchDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseClassLibrary\Streams\ReadAllTextDemo.cs" />
+    <Compile Include="BaseClassLibrary\Threading\DirectorySearcher.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\Threading\DirectorySearcherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADO.NET\DataReader\UsingKeyword.cs" />
+    <Compile Include="ADO.NET\MARS\MARSAsync.cs" />
+    <Compile Include="ADO.NET\MARS\MARSDemo.cs" />
+    <Compile Include="ADO.NET\MARS\MARSSync.cs" />
+    <Compile Include="ADO.NET\ProviderFactories\DbProviderFactoriesDemo.cs" />
+    <Compile Include="WindowsForms\BackgroundWorkerDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\BackgroundWorkerDemo.Designer.cs">
+      <DependentUpon>BackgroundWorkerDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms\DragandDrop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\MaskedTextBoxDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\MaskedTextBoxDemo.designer.cs">
+      <DependentUpon>MaskedTextBoxDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms\WebBrowserDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\WebBrowserDemo.Designer.cs">
+      <DependentUpon>WebBrowserDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADO.NET\AddUpdateDelete\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADO.NET\AddUpdateDelete\ListItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ADO.NET\CurrencyMgr\frmCurrencyMgrDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADO.NET\DataAdapter_DataSet\DataSetDemo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ADO.NET\DataReader\DataReaderDemo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ADO.NET\General\frmData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADO.NET\MasterDetail\frmMasterDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdditionalFeatures\XmlSerialization\HelloWorld.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdditionalFeatures\Security\Security.cs" />
+    <Compile Include="AdditionalFeatures\XmlSerialization\XmlSerializerDemo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClassesAndStructs\Person.cs" />
+    <Compile Include="ClassesAndStructs\PersonStruct.cs" />
+    <Compile Include="Generics\Arrays\ArrayDemo.cs" />
+    <Compile Include="Generics\GenericsPerfs\GenericStack.cs" />
+    <Compile Include="Generics\GenericsPerfs\ObjectStack.cs" />
+    <Compile Include="Generics\GenericsPerfs\TestClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generics\LinkedListDemo\LinkedList.cs" />
+    <Compile Include="Generics\LinkedListDemo\ListClient.cs" />
+    <Compile Include="AdditionalFeatures\ReflectionGenerics\LinkedList.cs" />
+    <Compile Include="AdditionalFeatures\ReflectionGenerics\ReflectionClient.cs" />
+    <Compile Include="Generics\LinkedListWords\LinkedListWordsDemo.cs" />
+    <Compile Include="Generics\NullableDemo.cs" />
+    <Compile Include="Interfaces\Iterators\GenericIterators.cs" />
+    <Compile Include="Interfaces\Iterators\MachineCollectionDemo.cs" />
+    <Compile Include="Interfaces\Iterators\StateArrayDemo.cs" />
+    <Compile Include="Interfaces\Iterators\YieldDemo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="LanguageSyntax\Conditionals\ConditionalStatements.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LanguageSyntax\LanguageReference\LanguageReference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LanguageSyntax\Looping\LoopingStatements.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Abstraction\Animal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Hiding\Animal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Hiding\AnimalTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Hiding\Cat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Hiding\Dog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Inheritance\Animal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Inheritance\AnimalTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Inheritance\Cat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Inheritance\Dog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Car.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\CarTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IDrive.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\OperatorOverloading\OperatorOverloadingDemo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Overloading\Animal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Overloading\AnimalTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Overloading\Constructors\Animal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Overloading\Constructors\AnimalTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Overloading\Constructors\Dog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Overloading\Dog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Overridding\Animal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Overridding\AnimalTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Overridding\Cat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Overridding\Dog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Polymorphism\Animal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Polymorphism\AnimalTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Polymorphism\Cat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Polymorphism\Dog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OOP\Polymorphism\ZooKeeper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\Collections\ArrayListDemo1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\Collections\ArrayListDemo2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\Collections\GenericListDemo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\Collections\HashTableDemo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\Collections\Person.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\Collections\PersonFirstNameComparer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\DateTime\DateTimeDemo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\DirectoriesFiles\DirectoriesFilesDemo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\FileSystemWatcher\FileSystemWatcherDemo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\Networking\NetworkClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\Networking\NetworkServer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\Networking\RequestResponseDemo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdditionalFeatures\Reflection\Person.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdditionalFeatures\Reflection\ReflectionDemo1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdditionalFeatures\Reflection\ReflectionDemo2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\Streams\FileStream1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\Streams\FileStream2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\Streams\StreamReaderDemo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\Streams\StreamWriterDemo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClassLibrary\StringBuilder\StringBuilderDemo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\FileDialogDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\GDIplus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\MenuDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\MessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\PaintImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\Simple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\SimpleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\StatusDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="BaseClassLibrary\Compression\ZipDemo.resx">
+      <DependentUpon>ZipDemo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseClassLibrary\FTP\FTPDemo.resx">
+      <DependentUpon>FTPDemo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseClassLibrary\RegularExpressions\RegexTester.resx">
+      <DependentUpon>RegexTester.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseClassLibrary\StopWatch\StopWatchDemo.resx">
+      <DependentUpon>StopWatchDemo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\DragandDrop.resx">
+      <DependentUpon>DragandDrop.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\MaskedTextBoxDemo.resx">
+      <DependentUpon>MaskedTextBoxDemo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\WebBrowserDemo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WebBrowserDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADO.NET\AddUpdateDelete\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADO.NET\CurrencyMgr\frmCurrencyMgrDemo.resx">
+      <DependentUpon>frmCurrencyMgrDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADO.NET\General\frmData.resx">
+      <DependentUpon>frmData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADO.NET\MasterDetail\frmMasterDetail.resx">
+      <DependentUpon>frmMasterDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generics\GenericsPerfs\TestClient.resx">
+      <DependentUpon>TestClient.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\FileDialogDemo.resx">
+      <DependentUpon>FileDialogDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\GDIplus.resx">
+      <DependentUpon>GDIplus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\MenuDemo.resx">
+      <DependentUpon>MenuDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\MessageBox.resx">
+      <DependentUpon>MessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\PaintImage.resx">
+      <DependentUpon>PaintImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\Simple.resx">
+      <DependentUpon>Simple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\SimpleDialog.resx">
+      <DependentUpon>SimpleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\StatusDemo.resx">
+      <DependentUpon>StatusDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.1.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2005 Express Edition</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Generics\Arrays\Properties\" />
+    <Folder Include="Generics\GenericsPerfs\Properties\" />
+    <Folder Include="Generics\LinkedListDemo\Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

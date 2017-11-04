@@ -1,0 +1,1 @@
+An additional VS solution with more threading examples can be found in this folder.  Open it with another instance of VS.

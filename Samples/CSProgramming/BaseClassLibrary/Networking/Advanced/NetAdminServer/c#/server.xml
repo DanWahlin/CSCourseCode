@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>test</name>
+    </assembly>
+    <members>
+        <member name="M:netadmin.netserver.#ctor(System.Int32)">
+            <summary>
+             This is the constructor of netserver class it opens the specified port to listen 
+             for clients
+            </summary>
+            <param name="prt">Port at which Server works</param>
+        </member>
+        <member name="M:netadmin.netserver.server_listen">
+            <summary>
+             This method is a starting point of listener thread which continously listens for new clients 
+             and when a client arrives starts a new thread to handle that client
+            </summary>
+        </member>
+        <member name="M:netadmin.clientconnect.#ctor(System.Net.Sockets.Socket)">
+            <summary>
+             This is the constructor of clientconnect class it initializes the socket with its member 
+             socket and starts a thread which handles that client
+            </summary>
+            <param name="sock">Socket which represents a client</param>
+        </member>
+        <member name="M:netadmin.clientconnect.rec_mesg">
+            <summary>
+             This method is a starting point of listener thread which continousy listens from client 
+            </summary>
+        </member>
+        <member name="M:netadmin.prog_start.Main">
+            <summary>
+             This is the program start point
+            </summary>
+            <returns>State in which program ends (int)</returns>
+        </member>
+    </members>
+</doc>

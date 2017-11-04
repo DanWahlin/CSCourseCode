@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Northwind" EntityNamespace="Model" ContextNamespace="Data" Class="NorthwindDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\wahlind\Desktop\n-layer\N-Layer\MultipleProjects\App_Data\Northwind.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="Data.Properties.Settings" SettingsPropertyName="NorthwindConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Customers" Member="Customers">
+    <Type Name="Customer" Id="ID1">
+      <Column Name="CustomerID" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ContactTitle" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Region" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="DateTimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="Customer_Order" Member="Orders" OtherKey="CustomerID" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Orders" Member="Orders">
+    <Type Name="Order" Id="ID2">
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerID" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="EmployeeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrderDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RequiredDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ShippedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ShipVia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Freight" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ShipName" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="ShipAddress" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="ShipCity" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="ShipRegion" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="ShipPostalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ShipCountry" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="DateTimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="Order_OrderDetail" Member="OrderDetails" OtherKey="OrderID" Type="OrderDetail" />
+      <Association Name="Customer_Order" Member="Customer" ThisKey="CustomerID" Type="Customer" IsForeignKey="true" />
+      <Association Name="Shipper_Order" Member="Shipper" ThisKey="ShipVia" Type="Shipper" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Products" Member="Products">
+    <Type Name="Product">
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="SupplierID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QuantityPerUnit" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="UnitPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="UnitsInStock" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="UnitsOnOrder" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="ReorderLevel" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Discontinued" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Product_OrderDetail" Member="OrderDetails" OtherKey="ProductID" Type="OrderDetail" />
+      <Association Name="Supplier_Product" Member="Supplier" ThisKey="SupplierID" Type="Supplier" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Shippers" Member="Shippers">
+    <Type Name="Shipper">
+      <Column Name="ShipperID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Association Name="Shipper_Order" Member="Orders" OtherKey="ShipVia" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Suppliers" Member="Suppliers">
+    <Type Name="Supplier">
+      <Column Name="SupplierID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ContactTitle" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Region" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="HomePage" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Supplier_Product" Member="Products" OtherKey="SupplierID" Type="Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Order Details]" Member="OrderDetails">
+    <Type Name="OrderDetail">
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UnitPrice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Discount" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Association Name="Order_OrderDetail" Member="Order" ThisKey="OrderID" Type="Order" IsForeignKey="true" />
+      <Association Name="Product_OrderDetail" Member="Product" ThisKey="ProductID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="OrderDescriptions">
+    <Type Name="OrderDescription" Id="ID3">
+      <Column Name="ShipperName" Type="System.String" CanBeNull="false" />
+      <Column Name="Product" Type="System.String" CanBeNull="false" />
+      <Column Name="Total" Type="System.Decimal" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" CanBeNull="false" />
+      <Column Name="UnitPrice" Type="System.Decimal" CanBeNull="false" />
+      <Column Name="SupplierName" Type="System.String" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.ap_GetCountries" Method="ap_GetCountries">
+    <ElementType Name="ap_GetCountriesResult">
+      <Column Name="Country" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ap_GetCustomer" Method="ap_GetCustomer">
+    <Parameter Name="CustomerID" Parameter="customerID" Type="System.String" DbType="NVarChar(5)" />
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="dbo.ap_GetCustomersByCountry" Method="ap_GetCustomersByCountry">
+    <Parameter Name="Country" Parameter="country" Type="System.String" DbType="VarChar(15)" />
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="dbo.ap_UpdateCustomer" Method="ap_UpdateCustomer">
+    <Parameter Name="CustomerID" Parameter="customerID" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="CompanyName" Parameter="companyName" Type="System.String" DbType="NVarChar(40)" />
+    <Parameter Name="ContactName" Parameter="contactName" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="ContactTitle" Parameter="contactTitle" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="Address" Parameter="address" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="City" Parameter="city" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="Region" Parameter="region" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="PostalCode" Parameter="postalCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Country" Parameter="country" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="Phone" Parameter="phone" Type="System.String" DbType="NVarChar(24)" />
+    <Parameter Name="Fax" Parameter="fax" Type="System.String" DbType="NVarChar(24)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ap_DeleteCustomer" Method="ap_DeleteCustomer">
+    <Parameter Name="CustomerID" Parameter="customerID" Type="System.String" DbType="NChar(5)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ap_GetCustomers" Method="ap_GetCustomers">
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="dbo.ap_GetCustomerOrdersCount" Method="ap_GetCustomerOrdersCount">
+    <Parameter Name="CustomerID" Parameter="customerID" Type="System.String" DbType="NChar(5)" />
+    <ElementType Name="ap_GetCustomerOrdersCountResult">
+      <Column Name="Count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ap_InsertCustomer" Method="ap_InsertCustomer">
+    <Parameter Name="CustomerID" Parameter="customerID" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="CompanyName" Parameter="companyName" Type="System.String" DbType="NVarChar(40)" />
+    <Parameter Name="ContactName" Parameter="contactName" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="ContactTitle" Parameter="contactTitle" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="Address" Parameter="address" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="City" Parameter="city" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="Region" Parameter="region" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="PostalCode" Parameter="postalCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Country" Parameter="country" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="Phone" Parameter="phone" Type="System.String" DbType="NVarChar(24)" />
+    <Parameter Name="Fax" Parameter="fax" Type="System.String" DbType="NVarChar(24)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ap_GetOrdersByCustomerID" Method="ap_GetOrdersByCustomerID">
+    <Parameter Name="CustomerID" Parameter="customerID" Type="System.String" DbType="NChar(5)" />
+    <ElementType IdRef="ID2" />
+  </Function>
+  <Function Name="dbo.ap_GetOrderDetailsByOrderID" Method="ap_GetOrderDetailsByOrderID">
+    <Parameter Name="OrderID" Parameter="orderID" Type="System.Int32" DbType="Int" />
+    <ElementType IdRef="ID3" />
+  </Function>
+</Database>

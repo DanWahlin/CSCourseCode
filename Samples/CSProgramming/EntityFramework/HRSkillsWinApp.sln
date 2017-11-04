@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRSkillsWinApp", "HRSkillsWinApp\HRSkillsWinApp.csproj", "{D2410A0C-FA19-4483-8CC8-FEC3AF76F6AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRSkillsOnline", "HRSkillsOnline\HRSkillsOnline.csproj", "{5748BD7D-0BA7-4767-B1C9-70FF6980C9F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2410A0C-FA19-4483-8CC8-FEC3AF76F6AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2410A0C-FA19-4483-8CC8-FEC3AF76F6AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2410A0C-FA19-4483-8CC8-FEC3AF76F6AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2410A0C-FA19-4483-8CC8-FEC3AF76F6AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5748BD7D-0BA7-4767-B1C9-70FF6980C9F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5748BD7D-0BA7-4767-B1C9-70FF6980C9F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5748BD7D-0BA7-4767-B1C9-70FF6980C9F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5748BD7D-0BA7-4767-B1C9-70FF6980C9F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

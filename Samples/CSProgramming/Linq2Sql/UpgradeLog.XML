@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="N-Layer">
+</Property><Property Name="Solution File" Value="D:\Wahlin Consulting\The Wahlin Group\Courses\C# 4\Files\CSProgramming\N-Layer_WithLINQ\N-Layer.sln">
+</Property><Property Name="Date" Value="Friday, January 21, 2011">
+</Property><Property Name="Time" Value="9:57 AM">
+</Property></Properties><Event ErrorLevel="0" Project="Biz" Source="ClassLibrary\Biz\Biz.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Biz" Source="ClassLibrary\Biz\Biz.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Data" Source="ClassLibrary\Data\Data.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Data" Source="ClassLibrary\Data\Data.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Model" Source="ClassLibrary\Model\Model.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Model" Source="ClassLibrary\Model\Model.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="N-Layer.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="N-Layer.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Biz" Source="ClassLibrary\Biz\Biz.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Data" Source="ClassLibrary\Data\Data.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Model" Source="ClassLibrary\Model\Model.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
